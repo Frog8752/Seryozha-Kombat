@@ -1,3 +1,29 @@
+
+/*
+CopyLeft 2020 Michael Rouves
+
+	This file is part of Michael's Clicker.
+	Michael's Clicker is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	Michael's Clicker is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU Affero General Public License for more details.
+
+	You should have received a copy of the GNU Affero General Public License
+	along with Michael's Clicker. If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
+
+
+
+/* 
+			================= BODY =================
+*/
 body{
 	background: rgb(15,232,146);
 	background: radial-gradient(circle, rgba(15,232,146,1) 0%, rgba(11,186,131,1) 31%, rgba(8,129,153,1) 100%);
@@ -87,4 +113,4 @@ body{
   margin-left: 20px;
   color: #FFFFFF;
   font-size: 50;
-    }
+	}
