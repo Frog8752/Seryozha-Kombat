@@ -1,22 +1,4 @@
-<!--
-CopyLeft 2020 Michael Rouves
-
- This file is part of Michael's Clicker.
- Michael's Clicker is free software: you can redistribute it and/or modify
- it under the terms of the GNU Affero General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
-
- Michael's Clicker is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- GNU Affero General Public License for more details.
-
- You should have received a copy of the GNU Affero General Public License
- along with Michael's Clicker. If not, see <https://www.gnu.org/licenses/>.
--->
-
-
+<!DOCTYPE html>
 <html>
 <head>
  <title>Clicker Game !</title>
@@ -25,27 +7,21 @@ CopyLeft 2020 Michael Rouves
  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
  <style>
    body {
-     overflow: hidden; /* Скрывает прокрутку */
-     height: 100vh; /* Занимает всю высоту экрана */
-     display: flex; /* Используем flexbox для центрирования */
-     justify-content: center; /* Центрируем по горизонтали */
-     align-items: center; /* Центрируем по вертикали */
-     margin: 0; /* Убираем отступы */
+     overflow: hidden; 
+     height: 100vh; 
+     display: flex;
+     justify-content: center; 
+     align-items: center; 
+     margin: 0;
      background: rgb(21,31,36);
      color: white;
    }
    .clicker {
-     /*Size*/
-     border-radius: 50%; /* Круглая кнопка */
+     border-radius: 50%; 
      width:200px;
      height:200px;
-     /* Position */
-     /*  position: absolute; */ /*  postulat de départ */
-     /* top: 50%; left: 50%; */ /*               à 50%/50% du parent référent */
-     /* transform: translate(-50%, -50%); */ /*  décalage de 50% de sa propre taille */
-     /* Animation */
      transition: width 0.3s, height 0.3s;
-     border: 5px solid #000000; /* Обводка кнопки */
+     border: 5px solid #000000; 
      background-color: #FFFFFF;
    }
    .clicker:hover {
@@ -71,7 +47,7 @@ CopyLeft 2020 Michael Rouves
  <p id="money" class="money-text"></p>
  <!-- MAIN CLICKER BUTTON -->
  <button id="main-clicker" class="clicker">
-  <img id="logo-clicker" src="img/money_logo.png" draggable=false class="clicker"></img>
+  <img id="logo-clicker" src="img/money_logo.png" draggable=false>
  </button>
  <!-- SHOP BUTTONS -->
  <button id="b1" class="button" disabled><b></b>Money per Click x2</button>
@@ -81,4 +57,4 @@ CopyLeft 2020 Michael Rouves
  <!-- Load Javascript -->
  <script src="script.js"></script>
 </body>
-</html>
+</html
