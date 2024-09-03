@@ -1,4 +1,6 @@
-<!--
+Сама настрой кнопки:
+Кстати кнопка круглая клика не в центре экрана , и вроде счётчик вылазит за экран и.т.д
+/*
 CopyLeft 2020 Michael Rouves
 
  This file is part of Michael's Clicker.
@@ -14,68 +16,104 @@ CopyLeft 2020 Michael Rouves
 
  You should have received a copy of the GNU Affero General Public License
  along with Michael's Clicker. If not, see <https://www.gnu.org/licenses/>.
--->
+*/
 
 
-<html>
-<head>
- <title>Clicker Game !</title>
- <link rel="stylesheet" media="screen" href="style.css">
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
- <style>
-   body {
-     overflow: hidden; /* Скрывает прокрутку */
-     height: 100vh; /* Занимает всю высоту экрана */
-     display: flex; /* Используем flexbox для центрирования */
-     justify-content: center; /* Центрируем по горизонтали */
-     align-items: center; /* Центрируем по вертикали */
-     margin: 0; /* Убираем отступы */
-     background: rgb(21,31,36);
-     color: white;
-   }
-   .clicker {
-     /*Size*/
-     border-radius: 50%; /* Круглая кнопка */
-     width:200px;
-     height:200px;
-     /* Position */
-     /*  position: absolute; */ /*  postulat de départ */
-     /* top: 50%; left: 50%; */ /*               à 50%/50% du parent référent */
-     /* transform: translate(-50%, -50%); */ /*  décalage de 50% de sa propre taille */
-     /* Animation */
-     transition: width 0.3s, height 0.3s;
-     border: 5px solid #000000; /* Обводка кнопки */
-     background-color: #FFFFFF;
-   }
-   .clicker:hover {
-     width:225px;
-     height:225px;
-   }
-   .clicker:active {
-     transition: width 0.05s, height 0.05s;
-     width:200px;
-     height:200px;
-   }
-   .money-text {
-     font-size: 50px;
-     margin-bottom: 30px; /* Добавлено: отступ снизу */
-   }
- </style>
-</head>
-<body>
- <!-- PLAYER MONEY -->
- <p id="money" class="money-text"></p>
- <!-- MAIN CLICKER BUTTON -->
- <button id="main-clicker" class="clicker">
-  <img id="logo-clicker" src="img/money_logo.png" draggable=false class="clicker"></img>
- </button>
- <!-- SHOP BUTTONS -->
- <button id="b1" class="button" disabled><b></b>Money per Click x2</button>
- <button id="b2" class="button" disabled><b></b>+5 every second</button>
- <button id="b3" class="button" disabled><b></b>Auto Gain x2</button>
+
+
+
+/* 
+   ================= BODY =================
+*/
+body{
+  /* Удален радиальный градиент */
+ background: rgb(21,31,36);
+  color: white; /* Добавлено: белый текст */
+}
+
+/* 
+      ================= ALL BUTTONS ANIMATIONS =================
+*/
+
+.button, .clicker {
+ /*Disable selection and drag*/
+ -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+ /*Revome buttons borders and otlines*/
+ outline: none;
+ border: none;
+ background-color:#FFFFFF;/*white*/
  
- <!-- Load Javascript -->
- <script src="script.js"></script>
-</body>
-</html>
+ /*Transition Animation between hover/active...*/
+ transition: box-shadow 0.3s, background-color 0.3s;
+}
+.button:hover, .clicker:hover{
+ box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(15, 15, 15, 0.15);/*shadow*/
+}
+.button:active, .clicker:active{
+ /*Shadow, color transition*/
+ transition: box-shadow 0.15s, background-color 0.1s;
+ box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3), 0 20px 20px 0 rgba(0, 0, 0, 0.15);
+ background-color:#F0F0F0;
+}
+
+/*
+   ================= SHOP =================
+*/
+.button{
+ width: 200;height: 50;
+ position: absolute;
+ left: 87%;
+ transform: translate(-50%, -50%);
+}
+.button:disabled{
+ background-color: #B3B3B3;
+}
+
+#b1{top:22%}
+#b2{top:32%}
+#b3{top:42%}
+
+
+/* 
+   ================= Main Clicker Button =================
+*/
+.clicker {
+ /*Size*/
+  border-radius: 50%; /* Круглая кнопка */
+ width:200px;
+ height:200px;
+ /* Position */
+ position: absolute;/*                postulat de départ */
+ top: 50%; left: 50%;/*               à 50%/50% du parent référent */
+ transform: translate(-50%, -50%);/*  décalage de 50% de sa propre taille */
+ /* Animation */
+ transition: width 0.3s, height 0.3s;
+  border: 5px solid #000000; /* Обводка кнопки */
+}
+.clicker:hover {
+ width:225px;
+ height:225px;
+}
+.clicker:active {
+ transition: width 0.05s, height 0.05s;
+ width:200px;
+ height:200px;
+}
+
+/* 
+     ================= Money text Display =================
+*/
+
+.money-text {
+ -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  margin-left: 20px;
+  color: #FFFFFF; /* Добавлено: белый текст */
+  font-size: 50;
+}
