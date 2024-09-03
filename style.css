@@ -81,7 +81,7 @@ body{
 */
 .clicker {
  /*Size*/
- border-radius: 50%;
+  border-radius: 50%; /* Круглая кнопка */
  width:200px;
  height:200px;
  /* Position */
@@ -90,6 +90,7 @@ body{
  transform: translate(-50%, -50%);/*  décalage de 50% de sa propre taille */
  /* Animation */
  transition: width 0.3s, height 0.3s;
+  border: 5px solid #000000; /* Обводка кнопки */
 }
 .clicker:hover {
  width:225px;
@@ -113,4 +114,4 @@ body{
   margin-left: 20px;
   color: #FFFFFF; /* Добавлено: белый текст */
   font-size: 50;
-	}
+}
