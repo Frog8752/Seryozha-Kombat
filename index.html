@@ -1,96 +1,22 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Кликер для Телеграма</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-color: #f0f0f0;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .container {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .button {
-      background: linear-gradient(to right, #ff0000, #ffff00);
-      border: none;
-      color: white;
-      padding: 20px 30px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 0; /* Квадратная кнопка */
-    }
-
-    #count {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    #energy {
-      width: 100%;
-      height: 10px;
-      background-color: #ccc;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      overflow: hidden; /* Скрывает часть полосы, чтобы визуально показывать уменьшение */
-    }
-
-    #energy-bar {
-      height: 100%;
-      background-color: #007bff;
-      width: 100%; /* Начальное значение - полная шкала */
-    }
-  </style>
+	<title>Clicker Game !</title>
+	<link rel="stylesheet" media="screen" href="style.css">
+	<meta charset="utf-8">
 </head>
 <body>
-
-<div class="container">
-  <h1 id="count">0</h1>
-  <div id="energy">
-    <div id="energy-bar"></div>
-  </div>
-  <button class="button" onclick="clickCounter()">Нажми меня</button>
-</div>
-
-<script>
-  let count = 0;
-  let energy = 100;
-  const energyCost = 10; // Стоимость клика в единицах энергии
-
-  function clickCounter() {
-    if (energy >= energyCost) {
-      count++;
-      document.getElementById("count").innerText = count;
-      energy -= energyCost;
-      updateEnergyBar();
-    } else {
-      alert("Недостаточно энергии!");
-    }
-  }
-
-  function updateEnergyBar() {
-    const energyBar = document.getElementById("energy-bar");
-    energyBar.style.width = ${energy}%; // Обновляем ширину energy-bar
-  }
-
-  updateEnergyBar(); // Инициализируем шкалу энергии при загрузке страницы
-</script>
-
+	<!-- PLAYER MONEY -->
+	<p id="money" class="money-text"></p>
+	<!-- MAIN CLICKER BUTTON -->
+	<button id="main-clicker" class="clicker">
+		<img id="logo-clicker" src="img/money_logo.png" draggable=false class="clicker"></img>
+	</button>
+	<!-- SHOP BUTTONS -->
+	<button id="b1" class="button" disabled><b></b>Money per Click x2</button>
+	<button id="b2" class="button" disabled><b></b>+5 every second</button>
+	<button id="b3" class="button" disabled><b></b>Auto Gain x2</button>
+	
+	<!-- Load Javascript -->
+	<script src="script.js"></script>
 </body>
-</html
+</html>
