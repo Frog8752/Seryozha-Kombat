@@ -1,5 +1,5 @@
 // script.js
-const moneyText = document.querySelector('.money-text');
+const moneyText = document.getElementById('money'); // Используйте ID элемента
 let money = 0;
 
 // Функция для обновления счетчика
@@ -9,7 +9,7 @@ function updateMoney() {
 
 // Добавьте событие клика на кнопку
 // (Предполагаем, что у вас есть кнопка с id="clicker")
-const clickerButton = document.getElementById('clicker');
+const clickerButton = document.getElementById('main-clicker'); // Используйте ID элемента
 clickerButton.addEventListener('click', () => {
   money++;
   updateMoney();
