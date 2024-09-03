@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Кнопка с градиентом</title>
+  <title>Кликер для Телеграма</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
     .button {
       background: linear-gradient(to right, #ff0000, #ffff00); /* Градиент от красного к желтому */
       border: none;
@@ -16,11 +36,28 @@
       cursor: pointer;
       border-radius: 5px; /* Скругленные углы */
     }
+
+    #count {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
 
-<button class="button">Нажми меня</button>
+<div class="container">
+  <h1 id="count">0</h1>
+  <button class="button" onclick="clickCounter()">Нажми меня</button>
+</div>
+
+<script>
+  let count = 0;
+
+  function clickCounter() {
+    count++;
+    document.getElementById("count").innerText = count;
+  }
+</script>
 
 </body>
 </html>
