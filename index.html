@@ -7,7 +7,7 @@ CopyLeft 2020 Michael Rouves
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
 
- Michael's Clicker is distributed in the hope that it will be useful,
+ Michael's clicker is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  GNU Affero General Public License for more details.
@@ -27,58 +27,6 @@ CopyLeft 2020 Michael Rouves
    body {
      overflow: hidden; /* Скрывает прокрутку */
      height: 100vh; /* Занимает всю высоту экрана */
-     display: flex; /* Используем flexbox для центрирования */
-     justify-content: center; /* Центрируем по горизонтали */
-     align-items: center; /* Центрируем по вертикали */
-     margin: 0; /* Убираем отступы */
-     background: rgb(21,31,36);
-     color: white;
-   }
-   .clicker {
-     /*Size*/
-     border-radius: 50%; /* Круглая кнопка */
-     width:200px;
-     height:200px;
-     /* Position */
-     /*  position: absolute; */ /*  postulat de départ */
-     /* top: 50%; left: 50%; */ /*               à 50%/50% du parent référent */
-     /* transform: translate(-50%, -50%); */ /*  décalage de 50% de sa propre taille */
-     /* Animation */
-     transition: width 0.3s, height 0.3s;
-     border: 5px solid #000000; /* Обводка кнопки */
-     background-color: #FFFFFF;
-   }
-   .clicker:hover {
-     width:225px;
-     height:225px;
-   }
-   .clicker:active {
-     transition: width 0.05s, height 0.05s;
-     width:200px;
-     height:200px;
-   }
-   .money-text {
-     font-size: 50px;
-     margin-bottom: 30px; /* Добавлено: отступ снизу */
-   }
-   .button {
-     width: 180px;
-     height: 50px;
-     background: linear-gradient(to right, #ff0000, #ffff00); /* Градиент от красного к желтому */
-     border: none;
-     color: white;
-     padding: 15px 32px;
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 16px;
-     margin: 4px 2px;
-     cursor: pointer;
-     border-radius: 5px; /* Скругленные углы */
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень */
-   }
-   .button:disabled {
-     background-color: #B3B3B3; /* Серый цвет для недоступных кнопок */
    }
  </style>
 </head>
