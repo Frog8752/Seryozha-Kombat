@@ -7,7 +7,7 @@ CopyLeft 2020 Michael Rouves
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
 
- Michael's clicker is distributed in the hope that it will be useful,
+ Michael's Clicker is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  GNU Affero General Public License for more details.
@@ -60,6 +60,25 @@ CopyLeft 2020 Michael Rouves
    .money-text {
      font-size: 50px;
      margin-bottom: 30px; /* Добавлено: отступ снизу */
+   }
+   .button {
+     width: 180px;
+     height: 50px;
+     background: linear-gradient(to right, #ff0000, #ffff00); /* Градиент от красного к желтому */
+     border: none;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     border-radius: 5px; /* Скругленные углы */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень */
+   }
+   .button:disabled {
+     background-color: #B3B3B3; /* Серый цвет для недоступных кнопок */
    }
  </style>
 </head>
